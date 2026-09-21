@@ -1,0 +1,50 @@
+/* Réinitialisation et base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
+
+/* En-tête de navigation fixe */
+.head {
+    background-color: #1e2434;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo { height: 60px; }
+.headliens { display: flex; gap: 30px; }
+.headliens a { color: #f0f0f0; text-decoration: none; font-size: 1.1rem; }
+.headliens a:hover, .headliens a.active { color: #7A90A4; }
+
+/* Structure des Diapositives (Sections) */
+.slide {
+    min-height: 100vh;
+    padding: 100px 50px 50px 50px; /* Espace pour le header fixe */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+/* Couleurs alternées pour différencier les diapos */
+.bg-light { background-color: #f4f6f8; }
+.bg-dark { background-color: #344D59; color: white; }
+
+/* Contenu des diapos */
+.text-content { flex: 1; }
+.text-content h1 { font-size: 3.5rem; margin-bottom: 20px; font-family: 'Georgia', serif; }
+.text-content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.text-content p, .text-content ul { font-size: 1.2rem; line-height: 1.6; margin-bottom: 15px; }
+.text-content ul { padding-left: 20px; }
+
+/* Images */
+.image-content { flex: 1; text-align: center; }
+.image-content img { max-width: 100%; max-height: 60vh; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+/* Grille pour l'équipe */
+.team-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
+.team-member { text-align: center; background: #fff; padding: 15px; border-radius: 10px; width: 200px; color: #333; }
+.team-member img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
