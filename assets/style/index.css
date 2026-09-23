@@ -40,9 +40,23 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333
 .text-content p, .text-content ul { font-size: 1.2rem; line-height: 1.6; margin-bottom: 15px; }
 .text-content ul { padding-left: 20px; }
 
-/* Images */
-.image-content { flex: 1; text-align: center; }
-.image-content img { max-width: 100%; max-height: 60vh; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+/* Images - Modification pour permettre l'empilement vertical */
+.image-content { 
+    flex: 1; 
+    display: flex;
+    flex-direction: column; /* Empile les images l'une sous l'autre */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espace de 20px entre les deux images */
+}
+
+.image-content img { 
+    max-width: 100%; 
+    /* Réduction de la hauteur max à 40vh pour s'assurer que 2 images rentrent sans déborder de l'écran */
+    max-height: 40vh; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
 
 /* Grille pour l'équipe */
 .team-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
